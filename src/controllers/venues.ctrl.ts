@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import procedures from '../procedures/users.proc';
+import procedures from '../procedures/venues.proc';
 import { procedure } from "../config/db/index";
 
 export const all = (req: Request, res: Response, next: NextFunction) => {
@@ -10,7 +10,7 @@ export const all = (req: Request, res: Response, next: NextFunction) => {
 };
 
 export const create = (req: Request, res: Response, next: NextFunction) => {
-    procedures.create(req.body.handle, req.body.username, req.body.email, req.body.password)
+    procedures.create(req.body.venueId, req.body.name, req.body.address1, req.body.address2, req.body.city, req.body.state, req.body.zip)
     .then((sets) => {
         res.json(sets);
     });
