@@ -15,7 +15,7 @@ router
     .use('/comments', comments)
     .use('/posts', posts)
     .use('/shows', shows)
-    .use('/venues', shows)
-    .use('/users', shows);
+    .use('/venues', venues)
+    .use('/users', users);
 
 export default router;

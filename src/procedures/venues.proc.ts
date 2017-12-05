@@ -1,7 +1,7 @@
 import { rows, row, empty } from "./base.proc";
 
 const all = () => {
-    return rows('spGetVenue');   
+    return rows('spGetVenues');   
 };
 
 const create = (venueId: string, name: string, address1: string, address2: string, city: string, state: string, zip: string) => {
