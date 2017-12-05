@@ -4,8 +4,8 @@ import { procedure } from "../config/db/index";
 
 export const all = (req: Request, res: Response, next: NextFunction) => {
     procedures.all()
-    .then((sets) => {
-        res.json(sets);
+    .then((artists) => {
+        res.json(artists);
     });
 };
 

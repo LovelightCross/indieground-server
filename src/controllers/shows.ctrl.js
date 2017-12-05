@@ -8,7 +8,7 @@ exports.all = (req, res, next) => {
     });
 };
 exports.create = (req, res, next) => {
-    shows_proc_1.default.create(req.body.showId, req.body.venueId, req.body.name, req.body.startTime, req.body.endTime, req.body.price, req.body.url)
+    shows_proc_1.default.create(req.body.artist, req.body.venue, req.body.datetime, req.body.ticketinfo)
         .then((sets) => {
         res.json(sets);
     });

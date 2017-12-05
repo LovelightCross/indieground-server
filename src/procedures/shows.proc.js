@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const base_proc_1 = require("./base.proc");
 const all = () => {
-    return base_proc_1.rows('spGetShows');
+    return base_proc_1.rows('spGetShowInfos');
 };
-const create = (showId, venueId, name, startTime, endTime, price, url) => {
-    return base_proc_1.row('spCreateShow', [showId, venueId, name, startTime, endTime, price, url]);
+const create = (artist, venue, datetime, ticketinfo) => {
+    return base_proc_1.row('spCreateShowInfo', [artist, venue, datetime, ticketinfo]);
 };
 exports.default = {
     all,

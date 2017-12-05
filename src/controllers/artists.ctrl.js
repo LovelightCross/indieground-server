@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const artists_proc_1 = require("../procedures/artists.proc");
 exports.all = (req, res, next) => {
     artists_proc_1.default.all()
-        .then((sets) => {
-        res.json(sets);
+        .then((artists) => {
+        res.json(artists);
     });
 };
 exports.create = (req, res, next) => {

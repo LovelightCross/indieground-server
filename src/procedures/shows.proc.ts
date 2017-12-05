@@ -1,11 +1,11 @@
 import { rows, row, empty } from "./base.proc";
 
 const all = () => {
-    return rows('spGetShows');   
+    return rows('spGetShowInfos');   
 };
 
-const create = (showId: string, venueId: string, name: string, startTime: string, endTime: string, price: string, url: string) => {
-    return row('spCreateShow', [showId, venueId, name, startTime, endTime, price, url]);
+const create = (artist: string, venue: string, datetime: string, ticketinfo: string) => {
+    return row('spCreateShowInfo', [artist, venue, datetime, ticketinfo]);
 }
 
 export default {

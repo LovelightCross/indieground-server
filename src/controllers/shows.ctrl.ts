@@ -10,7 +10,7 @@ export const all = (req: Request, res: Response, next: NextFunction) => {
 };
 
 export const create = (req: Request, res: Response, next: NextFunction) => {
-    procedures.create(req.body.showId, req.body.venueId, req.body.name, req.body.startTime, req.body.endTime, req.body.price, req.body.url)
+    procedures.create(req.body.artist, req.body.venue, req.body.datetime, req.body.ticketinfo)
     .then((sets) => {
         res.json(sets);
     });

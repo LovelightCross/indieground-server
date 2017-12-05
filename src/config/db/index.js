@@ -4,11 +4,11 @@ const mysql_1 = require("mysql");
 const lodash_1 = require("lodash");
 exports.default = () => { };
 const poolConfig = {
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE,
-    connectionLimit: 2
+    host: 'us-cdbr-iron-east-05.cleardb.net',
+    user: 'b777f060674820',
+    password: '9a4ac3a1',
+    database: 'heroku_dbbd035be13c097',
+    connectionLimit: 8
 };
 exports.pool = mysql_1.createPool(poolConfig);
 const formatArguments = (args = []) => {
