@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { all, create } from '../controllers/users.ctrl';
+import { all, create } from '../controllers/comments.ctrl';
 
 
 const router: Router = Router();

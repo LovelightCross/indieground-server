@@ -10,7 +10,7 @@ export const all = (req: Request, res: Response, next: NextFunction) => {
 };
 
 export const create = (req: Request, res: Response, next: NextFunction) => {
-    procedures.create(req.body.first_name, req.body.last_name, req.body.email, req.body.password)
+    procedures.create(req.body.id, req.body.userId, req.body.postId, req.body.body)
     .then((sets) => {
         res.json(sets);
     });

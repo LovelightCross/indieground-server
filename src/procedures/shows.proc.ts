@@ -1,10 +1,14 @@
-import { Request, Response, NextFunction } from 'express';
+import { rows, row, empty } from "./base.proc";
 
+const all = () => {
+    return rows('spGetShows');   
+};
 
-export const all = (req: Request, res: Response, next: NextFunction) => {
-
+const create = (showId: string, venueId: string, name: string, startTime: string, endTime: string, price: string, url: string) => {
+    return row('spCreateShow', [showId, venueId, name, startTime, endTime, price, url]);
 }
 
-export const create = (req: Request, res: Response, next: NextFunction) =>  {
-
-}
+export default {
+    all,
+    create
+};
